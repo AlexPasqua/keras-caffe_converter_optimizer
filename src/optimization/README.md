@@ -51,7 +51,7 @@ This was actually one alternative, the second one is commented on the source fil
 This is made possible cloning the model with a specific cloning function that returns a "prunable layer" in case it was a conv or FC one, otherwise it simply returns the layer as it is.<br>
 `pruned_model = tf.keras.models.clone_model(model, clone_function =`[`apply_pruning`](retrain_resnet50_cifar10.py#L124-L134)`)`
 
-Base model avarage accuracy: 0.8123
-Pruned model avarage accuracy: 0.8001
-Base model avarage evaluation time: 5.2928
+Base model avarage accuracy: 0.8123<br>
+Pruned model avarage accuracy: 0.8001<br>
+Base model avarage evaluation time: 5.2928<br>
 Pruned model avarage evaluation time: 4.2747
