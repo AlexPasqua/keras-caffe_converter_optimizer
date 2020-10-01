@@ -24,10 +24,10 @@ In [`src/optimization/`](https://github.com/PARCO-LAB/keras-caffe_converter_opti
 
 ### Results:
 **Conversion:**
-The models conversion has been tested with [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose). I created a C++ script ([`op_kp_printer.cpp`](https://github.com/PARCO-LAB/keras-caffe_converter_optimizer/tree/master/src/op_kp_printer.cpp)) to be placed in `openpose/examples/user_code/` to process the frames from a video input and write all the keypoints (code, name and coordinates) in a csv file. Then, giving that file as input to [`INDE_performance_test`](https://github.com/PARCO-LAB/INDE_performance_test) the following graphs were extracted: the first one was generated using the original [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose)'s models, the second one with those models converted from Caffe to Keras and back to Caffe.
-
-
-
+The models conversion has been tested with [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose). I created a C++ script ([`op_kp_printer.cpp`](https://github.com/PARCO-LAB/keras-caffe_converter_optimizer/tree/master/src/op_kp_printer.cpp)) to be placed in `openpose/examples/user_code/` to process the frames from a video input and write all the keypoints (code, name and coordinates) in a csv file. Then, giving that file as input to [`INDE_performance_test`](https://github.com/PARCO-LAB/INDE_performance_test) the following graphs were extracted:<br>
+the first one was generated using the original [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose)'s models
+![](data/original_models_test.png?raw=true)
+the second one with those models converted from Caffe to Keras and back to Caffe
 ![](data/complete_conversion_test.png?raw=true)
 
 **Pruning:** to be filled
