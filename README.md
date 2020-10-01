@@ -14,18 +14,18 @@
 **Keras** is one the most high level framework for NNs. It works with Python and it's the most approachable one, moreover there's a specific module for pruning: `tensorflow_model_optimization.sparsity`
 
 This project allows you to convert NNs from Caffe to Keras and back, so it's possible to work with the most approachable and high level framework to later deploy your NNs in the most efficient one. It may also turn useful, for example, to manipulate NNs in Keras within a project that necessarily requires Caffe.<br>
-**User instructions** see the [apposite README.md](https://github.com/PARCO-LAB/keras-caffe_converter_optimizer/tree/master/src/conversion/README.md)
+**User instructions** see the [apposite README.md](src/conversion/README.md)
 
 
 ### Optimization:
-In [`src/optimization/`](https://github.com/PARCO-LAB/keras-caffe_converter_optimizer/tree/master/src/optimization) there are 2 demo scripts to test Keras' pruning functionalities.
-* [`simple_classifier.py`](https://github.com/PARCO-LAB/keras-caffe_converter_optimizer/tree/master/src/optimization/simple_classifier.py) creates and prune a small custom model for image classification
-* [`retrain_resnet50_cifar10.py`](https://github.com/PARCO-LAB/keras-caffe_converter_optimizer/tree/master/src/optimization/retrain_resnet50_cifar10.py) is an example of transfer learning with pruning. The scripts loads ResNet50 with imagenet weights, adapt the net to perform classifications on `CIFAR10` and implements pruning functionalities.
+In [`src/optimization/`](/src/optimization) there are 2 demo scripts to test Keras' pruning functionalities.
+* [`simple_classifier.py`](src/optimization/simple_classifier.py) creates and prune a small custom model for image classification
+* [`retrain_resnet50_cifar10.py`](src/optimization/retrain_resnet50_cifar10.py) is an example of transfer learning with pruning. The scripts loads ResNet50 with imagenet weights, adapt the net to perform classifications on `CIFAR10` and implements pruning functionalities.
 
 
 ### Results:
 **Conversion:**
-The models conversion has been tested with [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose). I created a C++ script ([`op_kp_printer.cpp`](https://github.com/PARCO-LAB/keras-caffe_converter_optimizer/tree/master/src/op_kp_printer.cpp)) to be placed in `openpose/examples/user_code/` to process the frames from a video input and write all the keypoints (code, name and coordinates) in a csv file. Then, giving that file as input to [`INDE_performance_test`](https://github.com/PARCO-LAB/INDE_performance_test) the following graphs were extracted:<br>
+The models conversion has been tested with [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose). I created a C++ script ([`op_kp_printer.cpp`](src/op_kp_printer.cpp)) to be placed in `openpose/examples/user_code/` to process the frames from a video input and write all the keypoints (code, name and coordinates) in a csv file. Then, giving that file as input to [`INDE_performance_test`](https://github.com/PARCO-LAB/INDE_performance_test) the following graphs were extracted:<br>
 The first one was generated using the original [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose)'s models
 ![](data/original_models_test.png?raw=true)
 The second one with those models converted from Caffe to Keras and back to Caffe
@@ -33,11 +33,11 @@ The second one with those models converted from Caffe to Keras and back to Caffe
 As it's possible to notice, they're basically identical, so *the conversion back and forth does not introduce any error nor approximation.*
 
 **Pruning:**<br>
-[`simple_classifier.py`](https://github.com/PARCO-LAB/keras-caffe_converter_optimizer/tree/master/src/optimization/simple_classifier.py):
+[`simple_classifier.py`](src/optimization/simple_classifier.py):
 * Base model avarage accuracy: 0.8963
 * Pruned model avarage accuracy: 0.8945
 * Base model avarage evaluation time: 0.6029
 * Pruned model avarage evaluation time: 0.2979<br>
 
-[`retrain_resnet50_cifar10.py`](https://github.com/PARCO-LAB/keras-caffe_converter_optimizer/tree/master/src/optimization/retrain_resnet50_cifar10.py):
+[`retrain_resnet50_cifar10.py`](src/optimization/retrain_resnet50_cifar10.py):
 * 
