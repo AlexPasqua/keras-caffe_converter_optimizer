@@ -18,6 +18,7 @@ It loads the dataset with the Keras API: `keras.datasets.fashion_mnist.load_data
 * `Flatten`: to transform the data into a 1-dimensional vector
 * `Fully connected`: 128 neurons, activation ReLU
 * `Fully connected`: 10 neurons, activation **softmax** to get the 10 classes' probability score<br>
+
 Base model avarage accuracy: 0.8963<br>
 Pruned model avarage accuracy: 0.8945<br>
 Base model avarage evaluation time: 0.6029<br>
@@ -48,4 +49,9 @@ This was actually one alternative, the second one is commented on the source fil
 
 **Pruning**: it's done only on _convolutional_ and _fully connected_ layers with a constant sparsity target of 50%.<br>
 This is made possible cloning the model with a specific cloning function that returns a "prunable layer" in case it was a conv or FC one, otherwise it simply returns the layer as it is.<br>
-`pruned_model = tf.keras.models.clone_model(model, clone_function =`[`apply_pruning`](retrain_resnet50_cifar10.py#L124-L134)`)`<br> 
+`pruned_model = tf.keras.models.clone_model(model, clone_function =`[`apply_pruning`](retrain_resnet50_cifar10.py#L124-L134)`)`
+
+Base model avarage accuracy: 0.8123
+Pruned model avarage accuracy: 0.8001
+Base model avarage evaluation time: 5.2928
+Pruned model avarage evaluation time: 4.2747
