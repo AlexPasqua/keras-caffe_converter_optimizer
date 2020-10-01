@@ -1,10 +1,12 @@
 # Models conversion
 ### Contents:
-* [Caffe to Keras](#caffe to keras)
-* [Keras to Caffe](#keras to caffe)
+* [Caffe to Keras](#caffe-to-keras)
+* [Keras to Caffe](#keras-to-caffe)
+
+---
+
 ### Caffe to Keras:
-**Instructions:**<br>
-`python3 caffe2keras_converter.py <prototxt> <caffemodel> <output_dir> [--verbose]`<br>
+**Instructions:** `python3 caffe2keras_converter.py <prototxt> <caffemodel> <output_dir> [--verbose]`<br>
 Arguments:
 * `prototxt`: The filename (full path including file extension) of the '.prototxt' file that defines the Caffe model
 * `caffemodel`: The filename (full path including file extension) of the '.caffemodel' file that contains the network's parameters
@@ -16,10 +18,13 @@ Arguments:
 ---
 
 ### Keras to Caffe:
-**Instructions:**<br>
-`python3 keras2caffe_converter.py <keras_model> <output_dir> [--caffemodel_name CAFFEMODEL NAME] [--prototxt PROTOTXT]`<br>
+**Instructions:** `python3 keras2caffe_converter.py <keras_model> <output_dir> [--caffemodel_name CAFFEMODEL NAME] [--prototxt PROTOTXT]`<br>
 Arguments:
 * `keras_model`: The filename (full path including extension) of the file that contains the Keras model
 * `output_dir`: The path to the output directory where to save th caffemodel (and prototxt if necessary)
 * `--caffemodel_name CAFFEMODEL_NAME`: The name (WITHOUT extension) of the file where to save the Caffe model
 * `--prototxt PROTOTXT`: The filename (full path including file extension) of the '.prototxt' file that defines the Caffe model
+
+**Description:**<br>
+If no `prototxt` file was passed as argument, [`keras2caffe/create_prototxt.py`](keras2caffe/create_prototxt.py) will automatically generate one by going through the Keras input model to grasp all the information needed to create one.<br>
+Then the weights are copied from the Keras model, manipulated to match Caffe's requirements and put into the newly created Caffe NN.
