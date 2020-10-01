@@ -1,7 +1,7 @@
 # Keras-Caffe converter and optimizer
 ***This project is a NNs converter between Keras and Caffe (in both directions) and it includes pruning functionalities in Keras.***
 
-<img src="https://images.exxactcorp.com/CMS/landing-page/resource-center/supported-software/logo/Deep-Learning/caffe.png" width="300", height="100"/>
+<img src="https://images.exxactcorp.com/CMS/landing-page/resource-center/supported-software/logo/Deep-Learning/caffe.png" width="300" height="100"/>
 
 ## Conversion:
 **Caffe** is known to be the most efficient framework for developing and deploying NNs. It's made to work with C++, a Python API exists, but it's still a bit uncomplete and not very well documented. Furthermore no pruning/optimization APIs are available.
