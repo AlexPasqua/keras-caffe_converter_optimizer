@@ -6,9 +6,9 @@
 2. [Optimization](#optimization)
 3. [Results](#results)
 
+### Conversion:
 <img src="https://images.exxactcorp.com/CMS/landing-page/resource-center/supported-software/logo/Deep-Learning/caffe.png" width="270" height="90"/>&nbsp;<img src="https://miro.medium.com/fit/c/1838/551/0*BrC7o-KTt54z948C.jpg" width="300" height="100"/>
 
-### Conversion:
 **Caffe** is known to be the most efficient framework for developing and deploying NNs. It's made to work with C++, a Python API exists, but it's still a bit uncomplete and not very well documented. Furthermore no pruning/optimization APIs are available.
 
 **Keras** is one the most high level framework for NNs. It works with Python and it's the most approachable one, moreover there's a specific module for pruning: `tensorflow_model_optimization.sparsity`
@@ -24,7 +24,8 @@ In [`src/optimization/`](https://github.com/PARCO-LAB/keras-caffe_converter_opti
 
 ### Results:
 #### Conversion:
-to be filled
+The models conversion has been tested with [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose). I created a C++ script ([`op_kp_printer.cpp`](https://github.com/PARCO-LAB/keras-caffe_converter_optimizer/tree/master/src/op_kp_printer.cpp)) to be placed in `openpose/examples/user_code/` to process the frames from a video input and write all the keypoints (code, name and coordinates) in a csv file. Then, giving that file as input to [`INDE_performance_test`](https://github.com/PARCO-LAB/INDE_performance_test) the following graphs were extracted: the first one was generated using the original [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose)'s models, the second one with those models converted from Caffe to Keras and back to Caffe.
+![](https://github.com/PARCO-LAB/keras-caffe_converter_optimizer/tree/master/data/original_models_test.png) ![](https://github.com/PARCO-LAB/keras-caffe_converter_optimizer/tree/master/data/complete_conversion_test.pngcomplete_conversion_test.png)
 
 #### Pruning:
 to be filled
