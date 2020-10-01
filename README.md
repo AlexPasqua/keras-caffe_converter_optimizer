@@ -14,6 +14,7 @@
 **Keras** is one the most high level framework for NNs. It works with Python and it's the most approachable one, moreover there's a specific module for pruning: `tensorflow_model_optimization.sparsity`
 
 This project allows you to convert NNs from Caffe to Keras and back, so it's possible to work with the most approachable and high level framework to later deploy your NNs in the most efficient one. It may also turn useful, for example, to manipulate NNs in Keras within a project that necessarily requires Caffe.<br>
+
 **User instructions** see the [apposite README.md](src/conversion/README.md)
 
 
@@ -21,6 +22,8 @@ This project allows you to convert NNs from Caffe to Keras and back, so it's pos
 In [`src/optimization/`](/src/optimization) there are 2 demo scripts to test Keras' pruning functionalities.
 * [`simple_classifier.py`](src/optimization/simple_classifier.py) creates and prune a small custom model for image classification
 * [`retrain_resnet50_cifar10.py`](src/optimization/retrain_resnet50_cifar10.py) is an example of transfer learning with pruning. The scripts loads ResNet50 with imagenet weights, adapt the net to perform classifications on `CIFAR10` and implements pruning functionalities.
+
+**User instructions** see the [apposite README.md](src/optimization/README.md)
 
 
 ### Results:
