@@ -40,4 +40,7 @@ As it's possible to notice, they're basically identical, so *the conversion back
 * Pruned model avarage evaluation time: 0.2979<br>
 
 [`retrain_resnet50_cifar10.py`](src/optimization/retrain_resnet50_cifar10.py):
-* 
+* Base model avarage accuracy: 0.8123
+* Pruned model avarage accuracy: 0.8001
+* Base model avarage evaluation time: 5.2928
+* Pruned model avarage evaluation time: 4.2747
