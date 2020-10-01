@@ -43,3 +43,4 @@ The base ResNet50 is created using the Keras API `resnet = applications.ResNet50
 * `Dropout`: 50%
 * `BatchNormalization`
 * `Fully connected`: 64 neurons, activation **softmax** to get the 10 classes' probability score<br>
+This was actually one alternative, the second one is commented on the source file, check it in [`retrain_resnet50_cifar10.py`](retrain_resnet50_cifar10.py#L86-L105)
