@@ -16,4 +16,4 @@ This tool allows you to convert NNs from Caffe to Keras and back, so it's possib
 
 
 ### Optimization:
-In [`src/optimization/`](#src/optimization/) prova prova prova
+In [`src/optimization/`](https://github.com/PARCO-LAB/keras-caffe_converter_optimizer/tree/master/src/optimization) prova prova prova
