@@ -7,7 +7,7 @@
 3. [Optimization](#optimization)
 4. [Results](#results)
 
-**Directories structure:**<br>
+### Directories structure:
 ```
   keras-caffe_converter_optimizer
     |-- src
@@ -26,8 +26,8 @@
     |   |   |-- README.md
     |   |-- optimization
     |   |   |-- simple_classifier.py
-	|   |   |-- retrain_resnet50_cifar10.py
-	|   |   |-- README.md
+    |   |   |-- retrain_resnet50_cifar10.py
+    |   |   |-- README.md
 ```
 
 ### Conversion:
