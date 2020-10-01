@@ -44,8 +44,8 @@ The base ResNet50 is created using the Keras API `resnet = applications.ResNet50
 * `BatchNormalization`
 * `Fully connected`: 64 neurons, activation **softmax** to get the 10 classes' probability score
 
-This was actually one alternative, the second one is commented on the source file, check it in [`retrain_resnet50_cifar10.py`](retrain_resnet50_cifar10.py#L87-L104)
+This was actually one alternative, the second one is commented on the source file, check it in [`retrain_resnet50_cifar10.py`](retrain_resnet50_cifar10.py#L87-L104) (link to the specific lines)
 
 **Pruning**: it's done only on _convolutional_ and _fully connected_ layers with a constant sparsity target of 50%.<br>
 This is made possible cloning the model with a specific cloning function that returns a "prunable layer" in case it was a conv or FC one, otherwise it simply returns the layer as it is.<br>
-`pruned_model = tf.keras.models.clone_model(model, clone_function=`[`apply_pruning`](retrain_resnet50_cifar10.py#L124-L134)`)`<br> 
+`pruned_model = tf.keras.models.clone_model(model, clone_function =`[`apply_pruning`](retrain_resnet50_cifar10.py#L124-L134)`)`<br> 
