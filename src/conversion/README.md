@@ -1,4 +1,7 @@
 # Models conversion
+### Contents:
+* [Caffe to Keras](#caffe to keras)
+* [Keras to Caffe](#keras to caffe)
 ### Caffe to Keras:
 **Instructions:**<br>
 `python3 caffe2keras_converter.py <prototxt> <caffemodel> <output_dir> [--verbose]`<br>
