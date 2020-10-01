@@ -14,7 +14,7 @@
 **Keras** is one the most high level framework for NNs. It works with Python and it's the most approachable one, moreover there's a specific module for pruning: `tensorflow_model_optimization.sparsity`
 
 This project allows you to convert NNs from Caffe to Keras and back, so it's possible to work with the most approachable and high level framework to later deploy your NNs in the most efficient one. It may also turn useful, for example, to manipulate NNs in Keras within a project that necessarily requires Caffe.<br>
-For more information and for **user instructions** see the [apposite `README.md`](https://github.com/PARCO-LAB/keras-caffe_converter_optimizer/tree/master/src/optimization/README.md)
+**User instructions** see the [apposite README.md](https://github.com/PARCO-LAB/keras-caffe_converter_optimizer/tree/master/src/conversion/README.md)
 
 
 ### Optimization:
