@@ -63,11 +63,11 @@ The second one with the same models converted from Caffe to Keras and back to Ca
 [`simple_classifier.py`](src/optimization/simple_classifier.py):
 * Base model avarage accuracy: 0.8963 (89.63%)
 * Pruned model avarage accuracy: 0.8945 (89.45%)
-* Base model avarage evaluation time: 0.6029 s
-* Pruned model avarage evaluation time: 0.2979 s<br>
+* Base model avarage evaluation time with 10000 samples: 0.6029 s
+* Pruned model avarage evaluation time with 10000 samples: 0.2979 s<br>
 
 [`retrain_resnet50_cifar10.py`](src/optimization/retrain_resnet50_cifar10.py):
 * Base model avarage accuracy: 0.8123 (81.23%)
 * Pruned model avarage accuracy: 0.8001 (80.01%)
-* Base model avarage evaluation time: 5.2928 s
-* Pruned model avarage evaluation time: 4.2747 s
+* Base model avarage evaluation time with 10000 samples: 5.2928 s
+* Pruned model avarage evaluation time with 10000 samples: 4.2747 s

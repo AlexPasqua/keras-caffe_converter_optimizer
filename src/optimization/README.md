@@ -23,8 +23,8 @@ It loads the dataset with the Keras API: `keras.datasets.fashion_mnist.load_data
 **Tests results:**<br>
 Base model avarage accuracy: 0.8963 (89.63%)<br>
 Pruned model avarage accuracy: 0.8945 (89.45%)<br>
-Base model avarage evaluation time: 0.6029 s<br>
-Pruned model avarage evaluation time: 0.2979 s<br>
+Base model avarage evaluation time with 10000 samples: 0.6029 s<br>
+Pruned model avarage evaluation time with 10000 samples: 0.2979 s<br>
 
 ---
 
@@ -56,5 +56,5 @@ This is made possible by cloning the model with a specific "clone function" that
 **Tests results:**<br>
 Base model avarage accuracy: 0.8123 (81.23%)<br>
 Pruned model avarage accuracy: 0.8001 (80.01%)<br>
-Base model avarage evaluation time: 5.2928 s<br>
-Pruned model avarage evaluation time: 4.2747 s
+Base model avarage evaluation time with 10000 samples: 5.2928 s<br>
+Pruned model avarage evaluation time with 10000 samples: 4.2747 s
