@@ -2,13 +2,14 @@
 ### Contents:
 * [Caffe to Keras](#caffe-to-keras)
 * [Keras to Caffe](#keras-to-caffe)
+* [Back to the main README](https://github.com/PARCO-LAB/keras-caffe_converter_optimizer#keras-caffe-converter-and-optimizer)
 
 ---
 
 ### Caffe to Keras:
-**Instructions:** `python3 caffe2keras_converter.py <prototxt> <caffemodel> <output_dir> [--verbose]`<br>
+**How to use:** `python3 `[`caffe2keras_converter.py`](caffe2keras_converter.py)` <prototxt> <caffemodel> <output_dir> [--verbose]`<br>
 Arguments:
-* `prototxt`: The filename (full path including file extension) of the '.prototxt' file that defines the Caffe model
+* `prototxt`: The filename (full path including file extension) of the '.prototxt' file that contains the Caffe model definition
 * `caffemodel`: The filename (full path including file extension) of the '.caffemodel' file that contains the network's parameters
 * `output_dir`: The path to the directory where to save the Keras model and the file where you want the code to be written in
 
@@ -18,11 +19,11 @@ Arguments:
 ---
 
 ### Keras to Caffe:
-**Instructions:** `python3 keras2caffe_converter.py <keras_model> <output_dir> [--caffemodel_name CAFFEMODEL NAME] [--prototxt PROTOTXT]`<br>
+**How to use:** `python3 `[`keras2caffe_converter.py`](keras2caffe_converter.py)` <keras_model> <output_dir> [--caffemodel_name CAFFEMODEL_NAME] [--prototxt PROTOTXT]`<br>
 Arguments:
 * `keras_model`: The filename (full path including extension) of the file that contains the Keras model
-* `output_dir`: The path to the output directory where to save th caffemodel (and prototxt if necessary)
-* `--caffemodel_name CAFFEMODEL_NAME`: The name (WITHOUT extension) of the file where to save the Caffe model
+* `output_dir`: The path to the output directory where to save the caffemodel (and prototxt if necessary)
+* `--caffemodel_name CAFFEMODEL_NAME`: The name (without extension) of the file where to save the Caffe model
 * `--prototxt PROTOTXT`: The filename (full path including file extension) of the '.prototxt' file that defines the Caffe model
 
 **High-level description:**<br>
